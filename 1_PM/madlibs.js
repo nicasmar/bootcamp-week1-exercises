@@ -11,8 +11,9 @@ const verb1 = ______
 Change thses values to generate a different story
 */
 
-const story = `
-**replace this with your story using a template string**
-`
+const noun1 = 'SH'
+const verb1 = "running"
+
+const story = `He went ${verb1} in ${noun1}.`
 
 console.log(story)
