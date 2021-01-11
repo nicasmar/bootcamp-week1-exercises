@@ -1,42 +1,16 @@
 import React from 'react'
-import {nanoid} from 'nanoid'
-import { Container } from './styles'
-
-const list = [
-  {
-    id: 'a',
-    name: 'Go Shopping',
-  },
-  {
-    id: 'b',
-    name: 'Eat',
-  },
-]
+import TODO from './TODO'
+import greeting from './greeting'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 
 const App = () => (
-  <Container>
-    <form>
-      <label>
-        Insert todo:
-        <input type='text' />
-      </label>
-      <input type='submit' value='Submit' />
-    </form>
-    <form>
-      <label>
-        Delete todo:
-        <input type='text' />
-      </label>
-      <input type='submit' value='Submit' />
-    </form>
-
-    <h1>To Do List</h1>
-    <ol>
-      {list.map((item) => (
-        <li key={item.id}>{item.name}</li>
-      ))}
-    </ol>
-  </Container>
+  <BrowserRouter>
+    <Switch>
+      <Route path='/TODO' component={TODO} />
+      <Route path='/' component={greeting} />
+    </Switch>
+  </BrowserRouter>
+  
 )
 
 export default App

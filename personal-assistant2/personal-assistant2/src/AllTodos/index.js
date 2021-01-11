@@ -9,6 +9,7 @@ const AllTodos = () => {
   const { state, dispatch } = useContext(TodosContext)
   const [filter, setFilter] = useState('')
   const [todoText, setTodoText] = useState('')
+  console.log(state)
 
   return (
     <Container>
